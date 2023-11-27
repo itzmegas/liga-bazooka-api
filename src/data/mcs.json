@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Chili Parker",
+    "description": "Creador de rap argentino",
+    "image": "https://gravatar.com/avatar/189fc5f1c519bf70f4cd07f0ed38ad43?s=400&d=robohash&r=x",
+    "link": "https://www.youtube.com/watch?v=9Q4Q8gUQOYc"
+  },
+  {
+    "name": "Markitos",
+    "description": "Profesor de escritas",
+    "image": "https://gravatar.com/avatar/d25c8a2f614c595cc03327df199da084?s=400&d=robohash&r=x",
+    "link": "https://www.youtube.com/watch?v=9Q4Q8gUQOYc"
+  }
+]
