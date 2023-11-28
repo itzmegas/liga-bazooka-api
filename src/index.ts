@@ -9,6 +9,7 @@ import { options } from "./swagger";
 
 import * as path from "path"; // Add this import
 import { Routes } from "./routes";
+import configMongoose from "./utils/mongodb";
 
 const app = express();
 app.disable("x-powered-by");
@@ -22,12 +23,22 @@ const PORT = process.env.PORT || 8080;
 const specs = swaggerJsdoc(options);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
-Routes(app);
+const configure = () => {
+  configMongoose();
+  return Routes(app);
+};
 
+const appInit = async () => {
+  configure();
+  app.listen(PORT, () => {
+    console.log(`Server listening on port http://localhost:${PORT}`);
+  });
+  return app;
+};
+
+appInit();
+
+/* 
 app.use((req, res) => {
   res.status(404).send("<h1>404 Not Found</h1>");
-});
-
-app.listen(PORT, () => {
-  console.log(`Server listening on port http://localhost:${PORT}`);
-});
+}); */

@@ -1,3 +1,14 @@
-### Get mcs
+### Get de todos los mcs
+GET http://localhost:8080/api/mcs
 
-GET http://localhost:8080/mcs
+### Crea un nuevo mc
+
+POST http://localhost:8080/api/mcs
+Content-Type: application/json
+
+{
+    "name": "Chili Parker",
+    "description": "El creador del rap Argentino",
+    "image": "https://twitter.com/ligabazooka/status/1650991459623944200/photo/4",
+    "battles": ["https://www.youtube.com/watch?v=TXQ9QTqEXWw", "https://www.youtube.com/watch?v=euE58EapbQA&t=467s"]
+}
