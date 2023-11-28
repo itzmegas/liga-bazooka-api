@@ -2,7 +2,7 @@ import { model, Schema, Types } from "mongoose";
 
 const modelSchema = {
   _id: { type: Types.ObjectId },
-  name: { type: String, required: true },
+  name: { type: String },
   description: { type: String },
   image: { type: String },
   battles: { type: Array },

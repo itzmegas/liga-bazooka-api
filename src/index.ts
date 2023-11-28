@@ -1,6 +1,7 @@
 import express from "express";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
+import bodyparser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import dotenvExpand from "dotenv-expand";
@@ -14,6 +15,7 @@ import configMongoose from "./utils/mongodb";
 const app = express();
 app.disable("x-powered-by");
 app.use(cors());
+app.use(bodyparser.urlencoded({ extended: false }));
 
 const env = dotenv.config();
 dotenvExpand.expand(env);
